@@ -1,0 +1,140 @@
+.menu-bar {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    position: fixed;
+    top: 70px;
+    left: 0;
+}
+
+.menu-bar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu-bar ul li {
+    margin: 0;
+}
+
+.menu-bar ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-bar ul li a:hover,
+.menu-bar ul li a.active {
+    border-bottom: 2px solid rgb(130, 255, 255);
+    /* アンダーラインのスタイル */
+}
+
+.sidebar {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 40%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar button#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* ポップアップのスタイル */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+.popup-page {
+    display: none;
+}
+
+.popup-page.active {
+    display: block;
+}
+
+.option {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option.selected {
+    background-color: #d0d0d0;
+}
+
+.next-btn,
+.register-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next-btn:hover,
+.register-btn:hover {
+    background-color: #0056b3;
+}
